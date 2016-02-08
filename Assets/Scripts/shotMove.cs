@@ -7,6 +7,7 @@ public class shotMove : MonoBehaviour
 
 	void Start()
 	{
+        Debug.Log(name);
         Vector3 movement = new Vector3(1.0f, 0.0f, 0.0f);
         GetComponent<Rigidbody>().velocity = movement * speed;
     }

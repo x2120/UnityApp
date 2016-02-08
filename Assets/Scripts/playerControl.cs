@@ -12,24 +12,24 @@ public class playerControl : MonoBehaviour
 	public float speed;
 	public boundary gameMap;
 
-	// public GameObject shot;
-	// public Transform shotSpawn;
-	// public float fireRate;
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
 
-	// private float nextFire;
+    private float nextFire;
 
-	void Update()
+    void Update()
 	{
-		/*
-		if (Input.GetButton("Fire1") && Time.time > nextFire)
-		{
-			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-		}
-		*/
-	}
 
-	void FixedUpdate()
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        }
+
+    }
+
+    void FixedUpdate()
 	{
 		float moveHorizontal = Input.GetAxisRaw("Horizontal");
 		float moveVertical = Input.GetAxisRaw("Vertical");
