@@ -51,21 +51,21 @@ function Analyse() {
 	var cubes : GameObject[] = GameObject.FindGameObjectsWithTag("Cubes");
 	for(var i = 0; i < cubes.length; i++) {
 		switch (cubes[i].name) {
-			case "c1": cubes[i].transform.localScale.z = c1 * (magnitude/4); break;
-			case "c2": cubes[i].transform.localScale.z = c2 * (magnitude/4); break;
-			case "c3": cubes[i].transform.localScale.z = c3 * (magnitude/4); break;
-			case "c4": cubes[i].transform.localScale.z = c4 * (magnitude/2); break;
-			case "c5": cubes[i].transform.localScale.z = c5 * (magnitude/2); break;
-			case "c6": cubes[i].transform.localScale.z = c6 * (magnitude/2); break;
-			case "c7": cubes[i].transform.localScale.z = c7 * magnitude; break;
-			case "c8": cubes[i].transform.localScale.z = c8 * magnitude; break;
-			case "c9": cubes[i].transform.localScale.z = c9 * magnitude; break;
-			case "c10": cubes[i].transform.localScale.z = c10 * (magnitude * 2); break;
-			case "c11": cubes[i].transform.localScale.z = c11 * (magnitude * 2); break;
-			case "c12": cubes[i].transform.localScale.z = c12 * (magnitude * 2); break;
-			case "c13": cubes[i].transform.localScale.z = c13 * (magnitude * 4); break;
-			case "c14": cubes[i].transform.localScale.z = c14 * (magnitude * 4); break;
-			case "c15": cubes[i].transform.localScale.z = c15 * (magnitude * 4); break;
+			case "c1": cubes[i].transform.localScale.x = c1 * (magnitude/4); break;
+			case "c2": cubes[i].transform.localScale.x = c2 * (magnitude/4); break;
+			case "c3": cubes[i].transform.localScale.x = c3 * (magnitude/4); break;
+			case "c4": cubes[i].transform.localScale.x = c4 * (magnitude/2); break;
+			case "c5": cubes[i].transform.localScale.x = c5 * (magnitude/2); break;
+			case "c6": cubes[i].transform.localScale.x = c6 * (magnitude/2); break;
+			case "c7": cubes[i].transform.localScale.x = c7 * magnitude; break;
+			case "c8": cubes[i].transform.localScale.x = c8 * magnitude; break;
+			case "c9": cubes[i].transform.localScale.x = c9 * magnitude; break;
+			case "c10": cubes[i].transform.localScale.x = c10 * (magnitude * 2); break;
+			case "c11": cubes[i].transform.localScale.x = c11 * (magnitude * 2); break;
+			case "c12": cubes[i].transform.localScale.x = c12 * (magnitude * 2); break;
+			case "c13": cubes[i].transform.localScale.x = c13 * (magnitude * 4); break;
+			case "c14": cubes[i].transform.localScale.x = c14 * (magnitude * 4); break;
+			case "c15": cubes[i].transform.localScale.x = c15 * (magnitude * 4); break;
 		}
 	}
 
