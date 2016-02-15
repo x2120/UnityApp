@@ -8,7 +8,13 @@ public class Destroy : MonoBehaviour {
         {
             return;
         }
-        Destroy(other.gameObject);
-        Destroy(gameObject);
+
+        if (other.tag == "EnemyShot")
+        {
+            return;
+        }
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        
     }
 }
