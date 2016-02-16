@@ -3,10 +3,10 @@ using System.Collections;
 
 public class IgnoreColl : MonoBehaviour {
 
-    public Transform bulletPrefab;
+    public Transform Ignore;
     void Start()
     {
-        Transform bullet = Instantiate(bulletPrefab) as Transform;
+        Transform bullet = Instantiate(Ignore) as Transform;
         Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
     }
 }
