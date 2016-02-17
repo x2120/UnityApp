@@ -4,41 +4,29 @@ using System.Collections;
 public class Destroy : MonoBehaviour {
 
     void OnTriggerEnter(Collider other){
-        //only if the object hits the boundary it deletes it
+        //Object collider 
 
 
-        if (other.tag == "boundary")
+        /*if an Enemy Collides with another Enemy No interaction should occur (should pass through each other*/
+        if (other.tag == "EnemyT 1")
+        {
+            return;
+        }
+
+        /*Enemy shots should only interact with the player, it should pass through all other objects*/
+        if (other.tag == "Enemy_Shot")
+        {
+            return;
+        }
+
+
+        /*The player shot should destroy every thing it hits (exept the enemy shot?)*/
+        if (other.tag == "shot")
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
             return;
         }
-
-        //enemy objects dont interact with each other (but they should not collide regardless
-        if (other.tag == "Enemy")
-        {
-
-            return;
-        }
-
-        //if the bullet hits an object then the object should be destroyed
-        if (other.tag == "Shot")
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-            return;
-        }
-
-
-        ////back up boundary??? (has to be capsed or does not work???
-        //if (other.tag == "Boundary")
-        //{
-
-        //    return;
-        //}
-        /*trying to get enemy shots not to interact with each other and have only player shots interact*/
-        //Destroy(other.gameObject);
-        //Destroy(gameObject);
 
     }
 }
