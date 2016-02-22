@@ -60,12 +60,12 @@ function Analyse() {
 			case "c7": cubes[i].transform.localScale.z = c7 * magnitude; break;
 			case "c8": cubes[i].transform.localScale.z = c8 * magnitude; break;
 			case "c9": cubes[i].transform.localScale.z = c9 * magnitude; break;
-			case "c10": cubes[i].transform.localScale.z = c10 * (magnitude * 2); break;
-			case "c11": cubes[i].transform.localScale.z = c11 * (magnitude * 2); break;
-			case "c12": cubes[i].transform.localScale.z = c12 * (magnitude * 2); break;
-			case "c13": cubes[i].transform.localScale.z = c13 * (magnitude * 4); break;
-			case "c14": cubes[i].transform.localScale.z = c14 * (magnitude * 4); break;
-			case "c15": cubes[i].transform.localScale.z = c15 * (magnitude * 4); break;
+			case "c10": cubes[i].transform.localScale.z = c10 * (magnitude * 4); break;
+			case "c11": cubes[i].transform.localScale.z = c11 * (magnitude * 4); break;
+			case "c12": cubes[i].transform.localScale.z = c12 * (magnitude * 4); break;
+			case "c13": cubes[i].transform.localScale.z = c13 * (magnitude * 8); break;
+			case "c14": cubes[i].transform.localScale.z = c14 * (magnitude * 8); break;
+			case "c15": cubes[i].transform.localScale.z = c15 * (magnitude * 8); break;
 		}
 	}
 
