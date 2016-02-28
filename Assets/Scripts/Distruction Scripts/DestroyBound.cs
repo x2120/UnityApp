@@ -1,19 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿//using UnityEngine;
+//using System.Collections;
 
-public class DestroyBound : MonoBehaviour
-{
+//public class DestroyBound : MonoBehaviour
+//{
 
-    void OnTriggerEnter(Collider other)
-    {
-        //if An Object Hits the Boundary then the object is destoryed 
-        if (other.tag == "boundary")
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-            return;
-        }
-
-    }
-}
+//    void OnTriggerEnter(Collider other)
+//    {
+//        //if An Object Hits the Boundary then the object is destoryed 
+//        if (other.tag == "Boundary")
+//        {
+//            return;
+//        }
+//        Destroy(other.gameObject);
+//        Destroy(gameObject);
+//    }
+//}
 
