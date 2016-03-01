@@ -11,12 +11,14 @@ public class playerControl : MonoBehaviour
 {
 	public float speed;
 	public boundary gameMap;
+	private float xStart = 0;
+	private float zStart = 0;
 
-	// public GameObject shot;
-	// public Transform shotSpawn;
-	// public float fireRate;
-
-	// private float nextFire;
+	void Start()
+	{
+		xStart = Input.acceleration.x;
+		zStart = Input.acceleration.z;
+	}
 
 	void Update()
 	{
@@ -34,7 +36,7 @@ public class playerControl : MonoBehaviour
 		float moveHorizontal = Input.acceleration.x;
 		float moveVertical = -Input.acceleration.z;
 
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		Vector3 movement = new Vector3 (moveHorizontal-xStart, 0.0f, moveVertical-zStart);
 		GetComponent<Rigidbody>().velocity = movement * speed;
 
 		GetComponent<Rigidbody>().position = new Vector3
