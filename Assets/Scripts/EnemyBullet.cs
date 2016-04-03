@@ -13,9 +13,10 @@ public class EnemyBullet : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
-    {
-
+	void Start()
+	{
+        Vector3 movement = new Vector3(1.0f, 0.0f, 0.0f);
+        GetComponent<Rigidbody>().velocity = movement * speed;
     }
 
     public void SetDirection(Vector2 direction)
