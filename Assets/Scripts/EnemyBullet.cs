@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyBullet : MonoBehaviour
 {
     public float speed;
-    Vector2 _direction;
+    Vector3 _direction;
     bool isReady;
 
     void Awake()
@@ -15,11 +15,11 @@ public class EnemyBullet : MonoBehaviour
     // Use this for initialization
 	void Start()
 	{
-        Vector3 movement = new Vector3(1.0f, 0.0f, 0.0f);
+        Vector3 movement = new Vector3(1.0f, 0.0f, 1.0f);
         GetComponent<Rigidbody>().velocity = movement * speed;
     }
 
-    public void SetDirection(Vector2 direction)
+    public void SetDirection(Vector3 direction)
     {
         _direction = direction.normalized;
 
@@ -32,14 +32,14 @@ public class EnemyBullet : MonoBehaviour
     {
         if (isReady)
         {
-            Vector2 position = transform.position;
+            Vector3 position = transform.position;
 
             position += _direction * speed * Time.deltaTime;
             transform.position = position;
 
 
-            Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
-            Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+            Vector3 min = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
+            Vector3 max = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 1));
 
 
             if ((transform.position.x < min.x) || (transform.position.x > max.x) || (transform.position.x < min.y) || (transform.position.x > max.y))
